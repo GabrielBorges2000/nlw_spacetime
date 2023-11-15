@@ -11,15 +11,16 @@ const app = fastify()
 app.register(cors, {
   origin: true,
 })
+
 app.register(jwt, {
-  secret: 'spacetime',
+  secret: process.env.SECRET_JWT,
 })
 
 app.register(authRoutes)
 app.register(memoriesRoutes)
 
 app
-  .listen({ 
+  .listen({
     port: 3333,
     host: '0.0.0.0',
   })

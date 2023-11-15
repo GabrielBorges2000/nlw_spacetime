@@ -2,7 +2,6 @@ import axios from 'axios'
 import { FastifyInstance } from 'fastify'
 import { z } from 'zod'
 import { prisma } from '../lib/prisma'
-// import { prisma } from './lib/prisma'
 
 export async function authRoutes(app: FastifyInstance) {
   app.post('/register', async (req) => {
@@ -68,7 +67,7 @@ export async function authRoutes(app: FastifyInstance) {
       },
       {
         sub: user.id,
-        expiresIn: '30 days',
+        expiresIn: '2 days',
       },
     )
 

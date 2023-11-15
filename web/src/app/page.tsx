@@ -20,7 +20,7 @@ export default function Home() {
         <div className="absolute bottom-0 right-2 top-0 w-2 bg-stripes " />
 
         {isAuthenticated ? <Profile /> : <SignIn />}
-    
+
         <Hero />
 
         <Copyright />
